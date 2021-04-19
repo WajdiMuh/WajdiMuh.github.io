@@ -1,0 +1,450 @@
+:root {
+    --backgroundcolor: #a5a5a5;
+    --headercolor: #0079B6;
+    --borderorange: #F99D1E;
+    --borderblue: #0079B6;
+    --footer1: #0079B6;
+    --footer2: #00609b;
+    --footer3: #004a83;
+}
+@-webkit-keyframes backgroundmove {
+    from {
+        background-position-y: 0% ;
+        background-position-x: 0% ;
+    }
+    to {
+        background-position-y: 576px;
+        background-position-x: 1036px ;
+    }
+}
+@keyframes backgroundmove {
+    from {
+        background-position-y: 0% ;
+        background-position-x: 0% ;
+    }
+    to {
+        background-position-y: 576px;
+        background-position-x: 1036px ;
+    }
+}
+body{
+    background-image:url("../imgs/pattern.jpg");
+    background-color: var(--backgroundcolor);
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    -webkit-animation: backgroundmove 180s linear infinite;
+    animation: backgroundmove 180s linear infinite;
+}
+@keyframes growshrink {
+    from {transform: scale(1);}
+    to {transform: scale(1.05);}
+}
+h1{
+    margin: auto;
+    font-size: 58pt;
+    font-family: 'bebas_kairegular';
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    width: 240px;
+    height: 160px;
+    margin-left: 20px;
+    animation-name: growshrink;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+h2{
+    display: none;
+}
+header{
+    background-color: var(--headercolor);
+    width: 100vw;
+    height: 160px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+#zen-summary{
+    background-color: white;
+    border: 20px solid var(--borderorange);
+    border-right: none;
+    width: 25vw;
+    float: right;
+    display: block;
+    margin-top: 200px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    margin-bottom: -158px;
+}
+#zen-summary > p{
+    font-family: 'robotoregular';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#zen-summary::before{
+    content: "The Beauty of CSS Design";
+    font-family: 'bebas_kairegular';
+    font-size: 20pt;
+    width: 100%;
+    display: block;
+}
+#zen-preamble{
+    background-color: white;
+    border: 20px solid var(--borderblue);
+    width: 70vw;
+    position: relative;
+    margin: auto;
+    padding-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    z-index: -1;
+    clear: right;
+}
+#zen-preamble > p{
+    font-family: 'robotoregular';
+    margin-left: 20px;
+    margin-right: 14.5vw;
+}
+#zen-preamble > h3{
+    font-family: 'bebas_kairegular';
+    font-size: 20pt;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    height: max-content;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 0px;
+    /* padding-right: 12vw; */
+}
+#zen-explanation{
+    background-color: white;
+    border: 20px solid var(--borderorange);
+    border-left: none;
+    width:70vw;
+    position: relative;
+    margin-top: 40px;
+    padding-left: 5px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    min-height: 136px;
+}
+#zen-explanation > p{
+    font-family: 'robotoregular';
+    margin-left: 20px;
+}
+#zen-explanation > h3{
+    font-family: 'bebas_kairegular';
+    font-size: 20pt;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 0px;
+    writing-mode:vertical-lr;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    text-align: center;
+    transform: rotate(180deg);
+}
+#zen-participation{
+    background-color: white;
+    border: 20px solid var(--borderblue);
+    border-right: none;
+    width: 40vw;
+    float: right;
+    display: block;
+    margin-top: -50px;
+    padding-left: 5px;
+    margin-bottom: 40px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+}
+#zen-participation > p{
+    font-family: 'robotoregular';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#zen-participation > h3{
+    font-family: 'bebas_kairegular';
+    font-size: 20pt;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 0px;
+    text-align: right;
+}
+#zen-benefits{
+    background-color: white;
+    border: 20px solid var(--borderorange);
+    width: 70vw;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    clear: right;
+    position: relative;
+    z-index: 2;
+}
+#zen-benefits > p{
+    font-family: 'robotoregular';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#zen-benefits > h3{
+    font-family: 'bebas_kairegular';
+    font-size: 20pt;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 0px;
+    text-align: center;
+}
+#zen-requirements {
+    background-color: white;
+    border: 20px solid var(--borderblue);
+    border-left: none;
+    width:60vw;
+    position: relative;
+    margin-top: -100px;
+    padding-left: 5px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    z-index: 1;
+}
+#zen-requirements > p{
+    font-family: 'robotoregular';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#zen-requirements > h3{
+    font-family: 'bebas_kairegular';
+    font-size: 20pt;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 0px;
+    text-align: right;
+}
+footer{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: calc(100vw - 260px);
+    height: 160px;
+    display: flex;
+    z-index: 100;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
+    line-height: 100px;
+    padding-right: 15px;
+}
+footer > a{
+    width: 60px;
+    height: 60px; 
+    font-size: 0;
+    color: transparent;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--headercolor);
+    background-blend-mode: normal;
+    opacity: 1;
+    transition: opacity 250ms;
+}
+footer > a:hover{
+    opacity: 0.5;
+    background-blend-mode: luminosity;
+}
+.zen-validate-html{
+    background-image: url("../imgs/html.svg");
+    background-repeat: no-repeat;
+}
+.zen-validate-css{
+    background-image: url("../imgs/css.svg");
+    background-repeat: no-repeat;
+}
+.zen-license{
+    background-image: url("../imgs/cc.svg");
+    background-repeat: no-repeat;
+}
+.zen-accessibility{
+    background-image: url("../imgs/accessibility.svg");
+    background-repeat: no-repeat;
+}
+.zen-github{
+    background-image: url("../imgs/github.svg");
+    background-repeat: no-repeat;
+}
+#zen-summary > p > a,#zen-participation > p > a,#zen-requirements > p > a{
+    color: var(--borderblue);
+    transition: color 250ms;
+}
+#zen-summary > p > a:hover,#zen-participation > p > a:hover,#zen-requirements > p > a:hover{
+    color: var(--borderorange);
+}
+#design-selection{
+    margin-top: 40px;
+    padding-top: 5px;
+    background-color: var(--footer1);
+}
+#design-archives{
+    padding-top: 5px;
+    background-color: var(--footer2);
+}
+#zen-resources{
+    padding-top: 5px;
+    background-color: var(--footer3);
+}
+#design-selection > h3,#design-archives> h3,#zen-resources > h3{
+    font-family: 'bebas_kairegular';
+    font-size: 20pt;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: 0px;
+    text-align: center;
+    color: white;
+}
+#design-selection > nav > ul,#design-archives > nav > ul,#zen-resources > ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    align-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 6px;
+}
+#design-selection > nav > ul > li,#design-archives > nav > ul > li,#zen-resources > ul > li{
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'robotoregular';
+}
+#zen-resources > ul{
+    padding-bottom: 10px;
+}
+#design-selection > nav > ul > li > a,#design-archives > nav > ul > li > a,#zen-resources > ul > li > a{
+    color: white;
+    transition: color 250ms;
+}
+#design-selection > nav > ul > li > a:hover,#design-archives > nav > ul > li > a:hover,#zen-resources > ul > li > a:hover{
+    color: var(--borderorange);
+}
+@media screen and (max-width: 750px) {
+    #zen-summary{
+        border: 20px solid var(--borderorange);
+        margin:auto;
+        margin-top: 200px;
+        margin-bottom: 40px;
+        width: 70vw;
+        float: none;
+    }
+    #zen-summary::before {
+        text-align: center;
+    }
+    #zen-preamble > h3{
+        text-align: center;
+        position: static;
+    }
+    #zen-preamble{
+        padding-top: 5px;
+    }
+    #zen-preamble > p{
+        margin-right: 20px;
+    }
+    #zen-explanation > h3{
+        position: static;
+        transform: none;
+        writing-mode:horizontal-tb;
+    }
+    #zen-explanation{
+        border: 20px solid var(--borderorange);
+        margin: auto;
+        margin-top: 40px;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        padding-right: 5px;
+        display: block;
+    }
+    #zen-explanation > p{
+        margin-right: 20px;
+    }
+    #zen-participation{
+        border: 20px solid var(--borderblue);
+        width: 70vw;
+        float: none;
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+    }
+    #zen-participation > h3{
+        text-align: center;
+    } 
+    #zen-benefits{
+        margin-top: 40px;
+    }
+    #zen-requirements{
+        border: 20px solid var(--borderblue);
+        width: 70vw;
+        margin: auto;
+        margin-top: 40px;
+        padding-top: 5px;
+    }
+    #zen-requirements > h3{
+        text-align: center;
+    }
+    footer{
+        width: calc(100vw - 140px);
+    }
+    footer > a{
+        width: 30px;
+        height: 30px; 
+    }
+    h1{
+        font-size: 28pt;
+        width: 120px;
+        height: 100px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: fit-content;
+        line-height: 50px;
+    }
+}
+@font-face {
+    font-family: 'bebas_kairegular';
+    src: url('../fonts/bebaskai-webfont.eot');
+    src: url('../fonts/bebaskai-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebaskai-webfont.woff2') format('woff2'),
+         url('../fonts/bebaskai-webfont.woff') format('woff'),
+         url('../fonts/bebaskai-webfont.ttf') format('truetype'),
+         url('../fonts/bebaskai-webfont.svg#bebas_kairegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
