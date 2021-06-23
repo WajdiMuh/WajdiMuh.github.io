@@ -1,0 +1,294 @@
+:root {
+    --bgheader: #ECECEC;
+    --textheadercolor: #1C1C1C;
+    --textheadersubcolor: #707070;
+}
+/* main css used when viewport is larger than 768px */
+body{
+    background-color: var(--bgheader)!important;
+    padding-right: 0 !important;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+html, body {
+    /* overflow-x: hidden !important; */
+}
+.navbar{
+    background-color: var(--bgheader);
+}
+.nav-link{
+    color: var(--textcolor) !important;
+    border-radius: 4px;
+}
+.nav-link:hover{
+    color: var(--bgheader) !important;
+    background-color: var(--textheadercolor);
+}
+#header{
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
+}
+#shape1{
+    position: absolute;
+    top: 142px;
+    right: 0px;
+    width: 840px;
+}
+#shape2{
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    width: 200px;
+}
+#shape3{
+    position: absolute;
+    top: 1220px;
+    right: 0px;
+    width: 200px;
+}
+#firstwave{
+    position: absolute;
+    top: 450px;
+    left:0px;
+    width: min(800px,100%); 
+}
+#firstwavefix{
+    background-color: var(--textheadercolor);
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 550px;
+}
+p{
+    font-family: 'robotoregular';
+    color: white;
+}
+.textheadersub{
+    font-family: 'robotoregular';
+    font-size: 20pt !important;
+    margin: 0px !important;
+    color: var(--textheadersubcolor);
+}
+h1{
+    font-family: 'arista_2.0regular'; 
+    font-size: 50pt !important;
+    margin: 0px !important;
+    color: var(--textcolor);
+}
+#about,#contact{
+    background-color: var(--textheadercolor);
+}
+#about{
+    position: relative;
+    z-index: 3;
+}
+#contact{
+    position: relative;
+    z-index: 3;
+}
+#projects{
+    z-index: 1;
+    position: relative;
+    margin-top: -360px;
+    padding-top: 400px;
+    margin-bottom: -200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to bottom right, var(--bgheader) 30%, #A7A8AA);
+}
+.bgsprite{
+    z-index: 100;
+}
+.progress-bar-color{
+    background-image: linear-gradient(to right,#1B688E,#6034A3) !important;
+}
+.progress{
+    border-radius: 10px !important;
+    height: 10px !important;
+    margin-bottom: 16px;
+}
+#hardskills{
+    padding-bottom: 40px;
+    width: 50%;
+}
+#secondwave{
+    position: relative;
+    margin-top: -2px;
+    z-index: 3;
+    width: 100%;
+}
+#thirdwave{
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+.mycard{
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
+    background-color: var(--textheadercolor);
+    overflow: hidden;
+}
+.toprightcircle{
+    position: absolute;
+    top: -60px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right,#495CA7,#7411A0) !important;
+}
+.bottomleftcircle{
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right,#0B394D,#167199) !important;
+}
+.cardimg{
+    width: 60px;
+    height: 60px;
+}
+.cardreadmore{
+    position: relative;
+    background-color: white;
+    width: 75%;
+    height: 25px;
+    border: 1px solid #7018A1;
+    border-radius: 20px;
+}
+.cardreadmore > img{
+    background-image: linear-gradient(to bottom right,#7316A1,#495CA7) !important;
+    border-radius: 20px;
+    padding: 4px;
+    position:absolute;
+    top: -1px;
+    right: -1px;
+}
+.mycard > #cardflex > div > p{
+    color: var(--textheadercolor);
+}
+.mycard > #cardflex{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.cardlogobg{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.modal-body{
+    background-image: linear-gradient(to top right,#2979A7,#3D4A85);
+    padding: 0px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+.modalbgimg{
+    position: absolute;
+    margin-top: -30px;
+    width: 100%;
+    height: 100%;
+}
+.btn-close{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 100;
+}
+.aboutmedesc{
+    width: 35%;
+    max-width: 580px;
+}
+#headercon > h1 > br {
+    display: none;
+}
+/* media query to fix css on smaller devices and remove certain shapes to simplify the ui for mobile users */
+@media (max-width: 768px) {
+    .nav-link:hover{
+        color: var(--textcolor) !important;
+        background-color: var(--bgheader);
+        transition: none;
+    }
+    #headerinfo{
+        text-align: center;
+    }
+    h1{
+        font-size: 25pt !important;
+    }
+    .aboutmedesc{
+        width: 90%;
+        max-width: 580px;
+    }
+    #hardskills{
+        width: 85%;
+    }
+    .contactinfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .contactinfo > p{
+        margin-bottom: 0px;
+    }
+    #shape1{
+        width: 250px;
+        top: 180px;
+    }
+    #shape2,#shape3{
+        display: none;
+    }
+    #firstwave{
+        width: 200px;
+        top: 280px;
+    }
+    .textheadersub{
+        text-align: left;
+    }
+    #abouth{
+        padding-top: 60px !important;
+    }
+    #header{
+        margin-bottom: 40px !important;
+    }
+    .textheadersub{
+        font-size: 10pt !important;
+    }
+    #headercon > h1 > br {
+        display: initial;
+    }
+    #headercon{
+        width: 320px;;
+    }
+}
+/* display font and body font imported in css */
+@font-face {
+    font-family: 'arista_2.0regular';
+    src: url('../fonts/arista2.0-webfont.eot');
+    src: url('../fonts/arista2.0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arista2.0-webfont.woff2') format('woff2'),
+         url('../fonts/arista2.0-webfont.woff') format('woff'),
+         url('../fonts/arista2.0-webfont.ttf') format('truetype'),
+         url('../fonts/arista2.0-webfont.svg#arista_2.0regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
